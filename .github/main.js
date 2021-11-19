@@ -22,11 +22,11 @@
 
 
 const moves = ["rock", "paper", "scissors"];
-const playAgain = (true);
+let playAgain = true;
 
 // add a while loop to make the game continuous
 
-while (playAgain === true) {
+while (playAgain) {
 let playerMove = prompt ("Please enter your move")
 let computerMove = moves[ Math.floor((Math.random() * 3))]
 console.log (computerMove)
@@ -84,12 +84,15 @@ if (playerMove === "scissors" && computerMove === "rock") {
     //     playAgain = false;
     // }
 
-    window.confirm( "Would you like to play again?" );
-    if (confirm === true){
-        playAgain === true
-    } else {
-        playAgain === false
-    } break;
+    playAgain = confirm("would you like to play again??");
+}
+
+    // window.confirm( "Would you like to play again?" );
+    // if (confirm === true){
+    //     playAgain === true;
+    // } else {
+    //     playAgain === false;
+    // } break;
     
 
 
@@ -97,7 +100,7 @@ if (playerMove === "scissors" && computerMove === "rock") {
 
 
 
-}
+
 
 // ask the player if he wants to play again
 //
