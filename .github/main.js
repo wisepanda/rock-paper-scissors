@@ -22,23 +22,85 @@
 
 
 const moves = ["rock", "paper", "scissors"];
+const playAgain = (true);
 
+// add a while loop to make the game continuous
 
+while (playAgain === true) {
 let playerMove = prompt ("Please enter your move")
 let computerMove = moves[ Math.floor((Math.random() * 3))]
 console.log (computerMove)
 
 
 
-if (playerMove===computerMove) {
-console.log ("it's a draw")
+
+
+if (playerMove === computerMove) {
+    alert("0")
 
 }
 // if playermove is rock and computermove is paper winner is computer
 
-if ("playerMove===rock")
+if (playerMove === "rock" && computerMove === "paper") {
+    alert("-1")
+};
+//// if playermove is rock and computermove is scissors winner is player
 
 
+if (playerMove === "rock" && computerMove === "scissors") {
+    alert("1")
+}
+
+// if playermove is paper and computermove is scissors winner is computer
+if (playerMove === "paper" && computerMove === "scissors") {
+    alert("-1")
+}
+
+
+// if playermove is paper and computermove is rock winner is player
+if (playerMove === "paper" && computerMove === "rock") {
+    alert("1")
+}
+
+// if playermove is scissors and computermove is paper winner is player
+if (playerMove === "scissors" && computerMove === "paper") {
+    alert("1")
+}
+
+
+// if playermove is scissors and computermove is rock winner is computer
+if (playerMove === "scissors" && computerMove === "rock") {
+    alert("-1")
+}
+    // prompt("Would you like to play again yes or no?") {
+    // if (playAgain === yes === true)}; {
+    // else (playAgain === no ===  false)}
+
+    // prompt("Would you like to play again yes or no?")
+    // if (playAgain === "yes"){
+    //     playAgain = true;
+    // } else if (playAgain === "no")
+    // {
+    //     playAgain = false;
+    // }
+
+    window.confirm( "Would you like to play again?" );
+    if (confirm === true){
+        playAgain === true
+    } else {
+        playAgain === false
+    } break;
+    
+
+
+
+
+
+
+}
+
+// ask the player if he wants to play again
+//
 
 
 
