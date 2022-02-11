@@ -39,38 +39,38 @@ function getWinner(player1, player2) {
 
 function computerHasWon() {
   computerWins++;
-  alert(-1);
+  alert("Computer Wins!");
   alert(
-    "computerwins " +
-      computerWins +
-      " Player Wins " +
+    "Player Wins " +
       playerWins +
-      " Game Draw " +
+    "Computer Wins " +
+      computerWins +
+    " Game Draw " +
       gameDraw
   );
 }
 function playerHasWon() {
   playerWins++;
-  alert(1);
+  alert("You Win!");
   alert(
     "Player Wins " +
       playerWins +
-      " computerwins " +
+    "Computer Wins " +
       computerWins +
-      " Game Draw " +
+    "Game Draw " +
       gameDraw
   );
 }
 function weDraw() {
   gameDraw++;
-  alert(0);
+  alert("It's a Draw!");
   alert(
-    "It's a draw " +
-      gameDraw +
-      " computerwins " +
+    "Player Wins " +
+     playerWins +
+    "Computer Wins " +
       computerWins +
-      " Player Wins " +
-      playerWins
+    "Game Draw " +
+      gameDraw
   );
 }
 
