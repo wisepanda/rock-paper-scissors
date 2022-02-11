@@ -43,7 +43,7 @@ function computerHasWon() {
   alert(
     "Player Wins " +
       playerWins +
-    "Computer Wins " +
+    " Computer Wins " +
       computerWins +
     " Game Draw " +
       gameDraw
@@ -55,9 +55,9 @@ function playerHasWon() {
   alert(
     "Player Wins " +
       playerWins +
-    "Computer Wins " +
+    " Computer Wins " +
       computerWins +
-    "Game Draw " +
+    " Game Draw " +
       gameDraw
   );
 }
@@ -67,9 +67,9 @@ function weDraw() {
   alert(
     "Player Wins " +
      playerWins +
-    "Computer Wins " +
+    " Computer Wins " +
       computerWins +
-    "Game Draw " +
+    " Game Draw " +
       gameDraw
   );
 }
@@ -77,6 +77,14 @@ function weDraw() {
 function getWinnerByUI() {
   while (playAgain) {
     playerMove = prompt("Please enter your move");
+    if (playerMove === null){
+      return
+    };
+    if (playerMove.toLowerCase() !== "rock" && playerMove.toLowerCase() !== "paper" && playerMove.toLowerCase() !== "scissors"){
+      alert("moves allowed: rock, paper, scissor")
+      console.log(playerMove.toLowerCase())
+      continue
+    } 
     computerMove = moves[Math.floor(Math.random() * 3)];
     numberOfGames++;
 
