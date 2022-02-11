@@ -81,7 +81,7 @@ function getWinnerByUI() {
       return
     };
     if (playerMove.toLowerCase() !== "rock" && playerMove.toLowerCase() !== "paper" && playerMove.toLowerCase() !== "scissors"){
-      alert("moves allowed: rock, paper, scissor")
+      alert("Only moves allowed: rock, paper, scissors")
       console.log(playerMove.toLowerCase())
       continue
     } 
