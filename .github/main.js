@@ -1,5 +1,6 @@
 let playerMove;
 let computerMove;
+let playerName;
 const moves = ["rock", "paper", "scissors"];
 function conditionsPlayerWins() {
   return (
@@ -41,11 +42,11 @@ function computerHasWon() {
   computerWins++;
   alert("Computer Wins!");
   alert(
-    "Player Wins " +
+    playerName + " victories " +
       playerWins +
-    " Computer Wins " +
+    " Computer victories " +
       computerWins +
-    " Game Draw " +
+    " Games drawn " +
       gameDraw
   );
 }
@@ -53,11 +54,11 @@ function playerHasWon() {
   playerWins++;
   alert("You Win!");
   alert(
-    "Player Wins " +
+    playerName + " victories " +
       playerWins +
-    " Computer Wins " +
+    " Computer victories " +
       computerWins +
-    " Game Draw " +
+    " Games drawn " +
       gameDraw
   );
 }
@@ -65,18 +66,25 @@ function weDraw() {
   gameDraw++;
   alert("It's a Draw!");
   alert(
-    "Player Wins " +
+    playerName + " victories " +
      playerWins +
-    " Computer Wins " +
+    " Computer victories " +
       computerWins +
-    " Game Draw " +
+    " Games drawn " +
       gameDraw
   );
 }
 
+
+alert("Welcome Visitor!");
+playerName = prompt("What's your Name?");
+
+
+
 function getWinnerByUI() {
   while (playAgain) {
-    playerMove = prompt("Please enter your move");
+   
+    playerMove = prompt("Good luck " + playerName + "! Please enter your move");
     if (playerMove === null){
       return
     };
@@ -92,13 +100,16 @@ function getWinnerByUI() {
       playerHasWon();
     } else if (conditionsComputerWins()) {
       computerHasWon();
-    } else {
+    } else if (conditionsToDraw){
       weDraw();
     }
 
-    alert("you played " + numberOfGames + " games");
+    alert(playerName + " played " + numberOfGames + " games");
     console.log(computerMove);
     playAgain = confirm("would you like to play again??");
+  
   }
 }
+
 getWinnerByUI();
+
