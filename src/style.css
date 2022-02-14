@@ -1,0 +1,21 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    font-size: 60px;
+    font-style: oblique;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2{
+    font-size: 60px;
+    font-style: oblique;
+    font-family: 'Courier New', Courier, monospace
+}
+body{
+    background:linear-gradient(0deg, rgba(10, 73, 146, 0.795), rgb(126, 31, 150), rgb(10, 216, 206));
+
+}
